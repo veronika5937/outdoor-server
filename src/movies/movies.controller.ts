@@ -13,7 +13,7 @@ export class MoviesController {
 
     @Post()
     @UsePipes(ValidationPipe)
-    async createTask(@Body()movie: Movie): Promise<Movie> {
+    async createTask(@Body() movie: Movie): Promise<Movie> {
         return this.moviesService.addMovie(movie);
     }
 }
