@@ -16,4 +16,11 @@ export class MoviesService {
         return this.movieModel.create(movie);
     }
 
+    async deleteMovie(id) {
+        return await this.movieModel.deleteOne({_id : id});
+    }
+
+    async deleteAllMovies() {
+        return await this.movieModel.remove();
+    }
 }
